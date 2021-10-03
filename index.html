@@ -1,131 +1,429 @@
 <!DOCTYPE html>
-<html>
-<body>
-<style> 
-body {background-color: Gray}
-h1 {color: Indianred;  background-color:LemonChiffon; font-family: verdana; text-align: center; font-size: 70px}
- 
- 
- p {font-size: 20px; color: black; background-color: LightSeaGreen  }
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Final assignment</title>
 
-table {color: white ;FONT-FAMILY:Helvetica; font-size: 50px  }
-#Friends {
-  background-color: GreenYellow;
-  color: Indianred;
-  padding: 20px;
-  text-align: center;
-  font-size: 40px
-} 
 
-</style>
-  <h1>The Golden Jublee English High School</h1>
-  
-<img src="Omer.jpeg">
-  
-  
-  <p >Our school is located at Hyderabad, Tadban. Our school have one of the most talented students. I liked about my school is, everyone in our school respect others, whoever it maybe.</p> 
-  
-  
-  
-<table style="width:100%; height:700px ;border: 2px solid black">
-  <tr>
-  <th style=" border: 2px solid black; color: black;  background-color:white">S U B J E C T</th>
-  <th style=" border: 2px solid black; color: black ; background-color: white">T E A C H E R S </th>
-  </tr>
 
-  <tr>
-  <td style=" border: 2px solid black; background-color: black"> Biology</td>
-  <td style=" border: 2px solid black ; background-color: black"> Tajju sir</td>
-  
-  
-  </tr>
-  
-  <tr>
-  <td style=" border: 2px solid black ; background-color: black"> Mathematics</td>
-  <td style=" border: 2px solid black ; background-color: black"> Prasanth Bhaiya</td>
-  </tr>
-  
-  
-  <tr>
-  <td style="border: 2px solid black ; background-color: black"> Physical science </td>
-  <td style=" border: 2px solid black; background-color: black"> Prasanth Bhaiya</td>
-  
-  
-  </tr>
-  
-  <tr>
-  <td style="border: 2px solid black ; background-color: black"> English </td>
-  <td style=" border: 2px solid black; background-color: black"> Vikram Bhaiya</td>
-  
-  
-  </tr>
-  
+
+
+</head>
+
+<body style="background-color: antiquewhite ;">
+
+
+    <style>
+        *{
+		box-sizing:border-box;
+		scroll-behavior: smooth;
+	}
+	ul{
+		list-style:none;
+	}
+	a{
+		text-decoration:none;
+	}
+	.main{
+		width:100%;
+		height:100vh
+        ;
+		position: relative;
+	}
+	nav{		
+		align-items: center;
+		box-shadow: 5px 10px 30px rgba(0,0,0,0.02);
+		position: fixed;
+		z-index: 1;
+		background-color: antiquewhite;
+	}
+	nav ul{
+		display: flex;
+	}
+	nav ul li a{
+		height:40px;
+		line-height: 43px;
+		margin: 3px;
+		padding: 0px 22px;
+		font-size: 30px;
+		text-transform: uppercase;
+		font-weight: 500;
+		color:#585b5b;
+		letter-spacing: 1px;
+	}
+
+
+
+    nav ul li a:hover { background-color: rgb(255, 221, 177);
+		color: black;
+		box-shadow: 5px 10px 30px rgba(64,198,196,0.3);
+		transition: all ease 0.2s; }
+    .whole{
+		width:100%;
+		display: flex;
+		justify-content: space-around;
+		align-items: center;
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		transform: translate(-50%,-50%);
+        margin: 0px 0px 0px 0px;
+        
+	}
+	.photo{
+		width:500px;
+		height: 500px;
+       
+	}
+	.photo img{
+		width:70%;
+		height: 70%;
+		object-fit: contain;
+        margin: 100px 0px 0px 100px;
+		
+	}
+	.hv0 img{
+		width:300px;
+		height: 300px;
+		border-top-left-radius: 35%;
+    border-top-right-radius: 35%;
+    border-bottom-right-radius: 35%;
+    border-bottom-left-radius: 0%;
+		object-fit: cover;
+	}
+	.hv0{
+		width: 500px;
+    height: 500px;
+    background-color: #FFFFFF;
+    border-radius: 10px;
+    display: flex;
+    padding: 10px;
+    margin-left: 70px;
+	margin-top: 100px;
+    box-shadow: 5px 10px 30px rgb(0 0 0 / 8%);
+    justify-content: center;
+    align-items: center;
+	}
+	.hv0:hover	{
+		transform: translateY(-10px);
+		box-shadow: 5px 10px 30px rgba(0,0,0,0.1);
+		background-color: rgb(255, 221, 177);
+		transition: all ease 0.2s;}
+	
+	.text{
+		width:500px;
+		padding-left: 20px;
+	}
+	.text h1{
+		font-size: 3.5rem;
+		color:#1c3548;
+		margin:0px 0px 10px 0px;
+		line-height: 60px;
+	}
+	.text p{
+		color:#747474;
+		
+	}
+         
+
+        #hobbies{
+		display:flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		margin: -10px 500px 30px 500px;    width: 100%;
+        margin: 0px 0px 0px 0px; 
+        
+	}
+	    .hobbies-heading{
+		color: #1c3548;
+		font-size: 2.5rem;
+		font-weight: 400;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column; 
+        width: 100%;
+        height: 100%;
+          }
+
+        .hobbies-heading:hover { 
+	    background-color: rgb(255, 221, 177);
+		color: black;
+		box-shadow: 5px 10px 30px rgba(0, 0, 0, 0.3);
+		transition: all ease 0.2s; 
+		transform: translateY(-3px);
+	}
+
+
+        .coding-heading{ width: 670px }
+        .gn {  size: 110px ;  }    
+        .coding-photo{ width: 670px }
+
+
+
+        #rolemodel{
+		width:100%;
+		border-top: 1px solid rgba(58,58,58,0.03);
+		border-bottom: 1px solid rgba(58,58,58,0.03);
+		padding: 50px 0px;
+		background-position: center;
+		background-size: 1000px;
+        flex-direction: column;
+	}
+	.rolemodel-heading{
+		color: #1c3548;
+		font-size: 2.5rem;
+		margin:0px;
+		font-weight: 400;
+		letter-spacing: 1px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+        
+
+        
+	}
+
+    .rolemodel-heading:hover { 
+		background-color: rgb(255, 221, 177);
+		color: black;
+		box-shadow: 5px 10px 30px rgba(0, 0, 0, 0.3);
+		transition: all ease 0.2s;
+	    transform: translateY(-3px);
+	 }
+	.rm-box-container{
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-wrap: wrap;
+		margin:20px 0px;
+	}
+	.rolemodel-box {
+		width:310px;
+		height: 350px;
+		background-color: #FFFFFF;
+		border-radius: 10px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		padding: 10px;
+		margin: 20px;
+		box-shadow: 5px 10px 30px rgba(0,0,0,0.08);
+	}
+	.rolemodel-box img{
+		width:150px;
+		height: 150px;
+		border-radius: 50%;
+		object-fit: cover;
+	}
+	.rolemodel-box strong{
+		color:#585b5b;
+		margin:0px;
+		font-size: 30px;
+		font-weight: 600;
+		margin-top:10px;
+		
+	}
+	
+	.rolemodel-box p{
+		color:#000000;
+		font-size: 0.9rem;
+		margin:0px;
+		text-align: center;
+		display: block;
+		display: -webkit-box;
+		max-width: 80%;
+		-webkit-line-clamp:4;
+		-webkit-box-orient:vertical;
+		overflow: hidden;
+		text-overflow: ellipsis;
+	}	
+	.rolemodel-box:hover{
+		transform: translateY(-10px);
+		box-shadow: 5px 10px 30px rgba(0,0,0,0.1);
+		background-color: rgb(255, 221, 177);
+		transition: all ease 0.2s;}
+
+        .contact-heading { 
+        color: #1c3548;
+		font-size: 2.5rem;
+		margin:0px;
+		font-weight: 400;
+		letter-spacing: 1px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column; 
+        height: 110px;
+    }
+
+
+   
+
+        </style>
+
+
+      
+
+<section class="main">
+   <nav class="navbar">
+        <ul>
+        <li><a href="#main">Home</a></li>
+        <li><a href="#hobbies">My Hobbies</a></li>
+        <li><a href="#rolemodel">My Role Models</a></li>
+        <li><a href="#dreams">My Dreams</a></li>
+        <li><a href="#contact">Contact Me</a></li>
+    </ul>
+    </nav> 
+</section>
+    <section class="whole" id="main"  >
+    <div class="hv0">
+    <div class="photo">
+
+<img  src="79.png" width="400x" height="400x" />
+
+</div>
+</div>
+<div class="text">
+<h1 style=" background-color: rgb(255, 221, 177);"> Hello, I am Omer Balwari </h1>
+<p style=" background-color: rgb(255, 221, 177); font-size: 20px; "> Welcome to my creative website. 🎨🤓</p>
+</div>
+</section>
+<section  id="hobbies">
+    <div class="hobbies-heading">
+    <h1>My Hobbies</h1>
+</div>
+<div class="ff">
+    <div>
+        
+        <h1 style="font-size: 50px; color: rgb(175, 57, 57);">FREE FIRE</h1>
+    </div>
+
     
-  
-  <tr>
-  <td style="border: 2px solid black; background-color: black"> Social </td>
-  <td style=" border: 2px solid black; background-color: black"> Vikram Bhaiya</td>
-  
-  
-  </tr>
-  
-  
-  
-  <tr>
-  <td style="border: 2px solid black; background-color: black"> Telugu (language) </td>
-  <td style=" border: 2px solid black; background-color: black"> Mannan sir</td>
-  
-  
-  </tr>
-  
-    
-  
-  <tr>
-  <td style="border: 2px solid black; background-color: black"> Urdu (language) </td>
-  <td style=" border: 2px solid black; background-color: black"> Asma miss</td>
-  
-  
-  </tr>
-  
-    <tr>
-  <td style="border: 2px solid black; background-color: black"> Coding (Favorite) ;) </td>
-  <td style=" border: 2px solid black; background-color: black"> Vani didi</td>
-  
-  
-  </tr>
-  
-  <h2 id="Friends"> Friends</h2>
-  
-  <dl>
-  <dt style="color:Indianred; background-color:GreenYellow ">Amena</dt>
-  <dd style=" background-color:white ">- Best friend</dd>
-  
-  
-  <dt style="color:Indianred; background-color:GreenYellow " >Shahbaz uddin</dt>
-  <dd style=" background-color:white ">- Best Friend</dd>
-  
-  
-  
-  <dt style="color:Indianred ;background-color:GreenYellow" >Sami</dt>
-  <dd style=" background-color:white ">- Smartest person of our best friends group (Silly one) ;)</dd>
-  
-  <dt style="color:Indianred ;background-color:GreenYellow">Sania Saleem</dt>
-  <dd style=" background-color:white ">- Intelligent/Topper student of our best friends group</dd>
-  
-  <dt style="font-weight: bold ; background-color:GreenYellow">KHAJA MOIN</dt>
-  <dd style=" background-color:white ">- The dearest person for me in this world</dd>
-  
-  <dt style="color:Indianred ;background-color:
-  GreenYellow">Vikram Bhaiya</dt>
-  <dd style=" background-color:white ">- Best teacher I have ever had</dd>
-  
-</dl>
+    <div>
+        <img  src="https://esportsgen.com/wp-content/uploads/2021/07/2584226-755536616.jpg"> </br></br>
+        
+        <span style="background-color: rgb(255, 221, 177) ;">Undefeated three years old player of <b>Free Fire.</b> ✌️🥀😅</span>
+    </div>
 
-<span style="color: black; background-color: LightSeaGreen "> Our school facebook page</span>
 
-<a style= " background-color: LightSeaGreen"href="https://www.facebook.com/TheGoldenJubileeEnglishHighSchool">check it out</a>
-  
-  
-  
+     </div>
+     <div class="coding">
+         
+        <div class="coding-heading">
+        
+        <h1 style="font-size: 50px; color: rgb(175, 57, 57);" class="aan">CODING</h1>
+    </div>
+
+    <div>
+        <img  src="https://images.unsplash.com/photo-1592609931041-40265b692757?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTl8fGhhY2tlcnxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&w=1000&q=80" 
+        class="coding-photo"> </br></br> 
+		<span style="background-color: rgb(255, 221, 177) ;">A very curious learner of <b>coding.</b> 🖥️👾📟</span>
+       
+    </div> </div> 
+	<div class="coding">
+         
+        <div class="coding-heading">
+        
+        <h1 style="font-size: 50px; color: rgb(175, 57, 57);" class="aan">Coffee</h1>
+    </div>
+
+    <div>
+        <img  src="https://www.cancer.org/content/dam/cancer-org/images/photographs/single-use/espresso-coffee-cup-with-beans-on-table-restricted.jpg/jcr:content/renditions/cq5dam.web.1280.1280.jpeg" 
+        class="coding-photo"> </br></br> 
+		<span style="background-color: rgb(255, 221, 177) ;">I don't need an inspirational quote, <b>I need coffee.</b> ☕💫🤎</span>
+       
+    </div> </div>
+
+
+</section>
+<section id="rolemodel">
+
+    <div class="rolemodel-heading">
+        <h1>MY ROLE MODELS        </h1>
+    </div>
+    <div class="rm-box-container">
+
+
+        <div class="rolemodel-box" prophet muhammad > 
+            <img src="https://cdn.siasat.com/wp-content/uploads/2020/11/Muhammad.jpg"></br>
+            <strong>Prophet Muhammad</strong> </br>
+
+            <p style="font-size: 20px;">" Do salam, before talking. " </p>
+
+
+        </div>
+
+
+
+
+        <div class="rolemodel-box" newton > 
+            <img src="https://i.pinimg.com/originals/75/79/db/7579db53620b58a022c9c6c72e2316bc.jpg"> </br>
+            <strong>My Mother</strong> </br>
+
+            <p style="font-size: 20px;">" Nothing is perfect, try to understand everything.  " </p>
+
+
+        </div>
+
+        
+
+
+
+        <div class="rolemodel-box" elon musk > 
+            <img src="https://thumbor.forbes.com/thumbor/fit-in/416x416/filters%3Aformat%28jpg%29/https%3A%2F%2Fspecials-images.forbesimg.com%2Fimageserve%2F5f47d4de7637290765bce495%2F0x0.jpg%3Fbackground%3D000000%26cropX1%3D1699%26cropX2%3D3845%26cropY1%3D559%26cropY2%3D2704"> </br>
+            <strong>Elon musk</strong> </br>
+
+            <p style="font-size: 20px;">" I could either watch it <br>   
+                 happen or be a part of it." </p>
+
+
+        </div>
+    </div>
+</section>
+<section id="contact">
+
+    <div class="contact-heading">
+        <h1>CONTACT ME</h1></br></br>
+    </div>
+
+
+    <div align="center" class="contact-input" >
+		<form action="#">
+		Your full name:
+		<input type="text" name="UserName" size=35 maxlength=35 value=""></br></br>
+		Contact number:
+		<input type="text" name="UserName" size=35 maxlength=35 value=""></br></br>
+         Your E-mail ID:
+		<input type="email" name="emailID" size=36 maxlength=36 value=""></br></br>
+		What's your gender?
+		<input type="radio" name="exe" value=1>Male
+		<input type="radio" name="exe" value=2>Female
+        <input type="radio" name="exe" value=3>Custom
+        <input type="radio" name="exe" value=4>Rather not say
+		
+		</br></br>
+		Where do you live currently?
+		<select name="occupation" ><option>
+		<option value=1 >Asia
+		<option value=2 >Europe
+		<option value=3 >Africa
+		<option value=4 >North America
+            <option value=5 >South America
+                <option value=6 >Australia
+                    <option value=7 >Not in world
+		</select>
+		</br></br>
+		<input type=submit value="Submit" >
+		</form>
+	</div>
+
+</section>
+
 </body>
 </html>
